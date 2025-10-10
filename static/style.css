@@ -122,7 +122,17 @@ footer {
 @media only screen and (min-width: 1030px) {}
 
 /*tablets*/
-@media only screen and (min-width: 447px) and (max-width: 1024px) {}
+@media only screen and (min-width: 447px) and (max-width: 1024px) {
+
+  .content-blocks {
+    width: 90%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+}
 
 /*cell phones*/
 @media (max-width: 446px) {
