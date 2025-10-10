@@ -1,0 +1,173 @@
+/*Limpar formatações padrão*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/***** Layout *****/
+
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background: #FFFCF5;
+}
+
+#header-area {
+  background-color: #3C7E99;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+#logo-area {
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+}
+
+#menu-area {
+  padding-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+#header-area a:link,
+#header-area a:visited {
+  color: #FFF9E9;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#header-area a:hover {
+  color: #F7B600;
+  background: #FFFFFF;
+  text-decoration: none;
+}
+
+#main-area {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/***** Formatações em geral *****/
+
+.title-01 {
+  color: #FFF9E9;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.title-02 {
+  color: #3C7E99;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.content-blocks {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 0.3rem;
+  align-items: center;
+  align-content: center;
+}
+
+.image-02 {
+  margin-left: 0.1rem;
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.clickable-element {
+  cursor: pointer;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 0.2rem;
+}
+
+.content {
+  display: flex;
+  /*text-align: left;*/
+  /*align-items: center;*/
+  margin: 0.1rem;
+  padding: 0;
+  width: 50%;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #272728;
+  padding-right: 0.2rem;
+  margin: 0;
+
+
+}
+
+
+footer {
+  background: #3C7E99;
+  color: #FFF9E9;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 7rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/*small monitor desktop and up*/
+@media only screen and (min-width: 1030px) {}
+
+/*tablets*/
+@media only screen and (min-width: 447px) and (max-width: 1024px) {}
+
+/*cell phones*/
+@media (max-width: 446px) {
+
+
+  #menu-area a {
+    font-size: 77%;
+  }
+
+
+  .title-01 {
+    font-size: 1.7rem;
+  }
+
+  .title-02 {
+    font-size: 1.5rem;
+  }
+
+
+  .content-blocks {
+    width: 90%;
+  }
+
+  .image-02 {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .content {
+    width: 100%;
+
+  }
+
+  .paragraph {
+    font-size: 95%;
+  }
+
+
+  footer p {
+    font-size: 90%;
+  }
+
+  footer {
+    margin-top: 3rem;
+  }
+
+}
