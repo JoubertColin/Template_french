@@ -11,7 +11,6 @@ html {
   /* ou 'none' */
 }
 
-
 /***** Layout *****/
 
 body {
@@ -70,6 +69,12 @@ body {
   text-align: center;
 }
 
+.image-02 {
+  margin-left: 0.1rem;
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+
 .content-blocks {
   display: flex;
   width: 100%;
@@ -78,19 +83,6 @@ body {
   margin-bottom: 0.3rem;
   align-items: center;
   align-content: center;
-}
-
-.image-02 {
-  margin-left: 0.1rem;
-  border-radius: 0.6rem;
-  margin-bottom: 2rem;
-}
-
-.clickable-element {
-  cursor: pointer;
-  justify-content: center;
-  vertical-align: middle;
-  margin-left: 0.2rem;
 }
 
 .content {
@@ -108,9 +100,18 @@ body {
   color: #272728;
   padding-right: 0.2rem;
   margin: 0;
-
-
 }
+
+.clickable-element {
+  cursor: pointer;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 0.2rem;
+}
+
+
+
+
 
 
 footer {
@@ -123,7 +124,7 @@ footer {
   font-size: 1.2rem;
 }
 
-/*small monitor desktop and up*/
+/*large monitor desktop and up*/
 @media only screen and (min-width: 1030px) {}
 
 /*tablets*/
@@ -142,11 +143,9 @@ footer {
 /*cell phones*/
 @media (max-width: 446px) {
 
-
   #menu-area a {
     font-size: 77%;
   }
-
 
   .title-01 {
     font-size: 1.7rem;
@@ -155,7 +154,6 @@ footer {
   .title-02 {
     font-size: 1.5rem;
   }
-
 
   .content-blocks {
     width: 90%;
@@ -166,7 +164,6 @@ footer {
     height: auto;
   }
 
-
   .content {
     width: 100%;
 
@@ -175,7 +172,6 @@ footer {
   .paragraph {
     font-size: 95%;
   }
-
 
   footer p {
     font-size: 90%;

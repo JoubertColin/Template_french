@@ -1,4 +1,7 @@
-{% macro start(titulo, header) %}
+
+<!-- Macro: Page Opening -->
+
+{% macro start(title, header) %}
 
 <!DOCTYPE html>
 
@@ -8,7 +11,7 @@
     <meta charset="utf-8">    
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ titulo }}</title>    
+    <title>{{ title }}</title>    
     <link rel="stylesheet" href="static/style.css">
 
 </head>
@@ -33,7 +36,10 @@
 
 {% endmacro %}
 
-{% macro image_subtitle_main(link, image, subtitle, audio) %}
+
+<!-- Macro: Image and Main Title -->
+
+{% macro main_image_title(link, image, title, audio) %}
 
         <div class="content-blocks">
             <a href="{{ link }}" target="_self">
@@ -44,15 +50,18 @@
         </div>
 
         <div class="content-blocks">  
-            <h2 class="title-02">{{ subtitle }}</h2>
+            <h2 class="title-02">{{ title }}</h2>
             <img class="clickable-element img-audio" width="16px" height="16px" src='static/imagens/som91.png' data-audio='static/sons/frase_{{ audio }}.mp3' alt="Imagem 1">
         </div>
 
 {% endmacro %}
 
+
+<!-- Macro: Text - One Paragraph -->
+
 {% macro text(text, audio) %}
 
-            <div class="content-blocks espaco4">
+            <div class="content-blocks">
                 <div class="content">
                     <p class="paragraph">{{ text }}</p>
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
@@ -62,6 +71,29 @@
 
 {% endmacro %}
 
+
+<!-- Macro: Text - Two Paragraphs -->
+
+{% macro text_02(text, text_02, audio) %}
+
+            <div class="content-blocks">
+                <div class="content">
+                    <p class="paragraph">{{ text }}</p>
+                    <p class="paragraph">{{ text_02 }}</p>                    
+                    <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
+                    <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
+                </div>
+            </div>
+
+{% endmacro %}
+
+
+
+
+
+
+
+<!-- Macro: Footer -->
 
 {% macro end(footer) %}
         <script src="static/script.js"></script>
