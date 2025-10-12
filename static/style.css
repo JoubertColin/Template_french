@@ -188,7 +188,7 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: 0.1fr 0.1fr 0.1fr;
-  margin: 3.13rem 0 0 1.25rem;
+  margin: 3.13rem 0 0 0.87rem;
   gap: 2rem;
 }
 
@@ -281,6 +281,14 @@ footer {
     margin-left: 0;
     border-radius: 3.1rem;
   }
+
+
+  .image-02:hover {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1rem;
+  }
+
 
   .content {
     width: 100%;
