@@ -1,11 +1,14 @@
 <!--    ###  Import Macros  ###    -->
 {% from "partials/componentes.html" import start, main_image_title, text, text_02, model_01, model_02, images_questions_01, end %}
 
+
 <!--    ###  Start HTML, HEADER  ###    -->
 {{ start( "Le français pour tous les âges!", "Classe 01" ) }}
 
+
 <!--    ###  Main Title and Image  ###    -->
 {{ main_image_title("https://www.youtube.com/watch?v=P3QS83ubhHE&list=RDP3QS83ubhHE&start_radio=1", "static/imagens/stromae.jpg", "Connaissons un Artiste Francophone !", "001") }}
+
 
 <!--    ###  Text  ###    -->
 <div class="margin-top-2">
@@ -19,6 +22,7 @@
 {{ text("En août 2023, avec le clip du titre \"Papaoutai\", il devient le deuxième artiste à dépasser le milliard de vues sur YouTube avec une chanson en langue française.", "005") }}
 
 {{ text("Dans ses trois albums, Stromae aborde des sujets graves et contemporains sur des mélodies dansantes.", "006") }}
+
 
 <!--    ###  First Questionnaire  ###    -->
 <div class="bold margin-top-2">
@@ -57,6 +61,7 @@
 {{model_01()}}
 </div>
 
+
 <!--    ###  Second Questionnaire  ###    -->
 <div class="bold margin-top-2">
 {{ text_02("II- ", "Sous-titrez les images de clip Santé de Stromae, à l'aide des phrases distribuées et les expressions de la première activité:", "013") }}
@@ -76,9 +81,10 @@
 
 {{model_02("6.", "6", "C", "Les pêcheurs ramassent les poissons:", "019")}}
 
-{{images_questions_01("A", "a", "B", "b", "C", "c")}}
+{{images_questions_01("A", "foto_a.jpg", "B", "foto_b.jpg", "C", "foto_c.jpg")}}
 
-{{images_questions_01("D", "d", "E", "e", "F", "f")}}
+{{images_questions_01("D", "foto_d.jpg", "E", "foto_e.jpg", "F", "foto_f.jpg")}}
+
 
 <!--    ###  FOOTER, End HTML  ###    -->
 {{ end("Il est toujours temps d'apprendre !!!") }}
