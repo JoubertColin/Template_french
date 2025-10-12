@@ -14,21 +14,21 @@ html {
 /***** Layout *****/
 
 body {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: #FFFCF5;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 #header-area {
+  margin-bottom: 2.5rem;
   background-color: #3C7E99;
   text-align: center;
-  margin-bottom: 2.5rem;
 }
 
 #logo-area {
   justify-content: center;
+  margin-top: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-top: 0;
 }
 
 #menu-area {
@@ -38,15 +38,15 @@ body {
 
 #header-area a:link,
 #header-area a:visited {
-  color: #FFF9E9;
   padding: 0.5rem 0.75rem;
+  color: #FFF9E9;
   font-weight: bold;
   text-decoration: none;
 }
 
 #header-area a:hover {
-  color: #F7B600;
   background: #FFFFFF;
+  color: #F7B600;
   text-decoration: none;
 }
 
@@ -55,7 +55,7 @@ body {
   margin: 0 auto;
 }
 
-/***** Formatações em geral *****/
+/****** Formatações em geral ******/
 
 .title-01 {
   color: #FFF9E9;
@@ -69,60 +69,170 @@ body {
   text-align: center;
 }
 
-.image-02 {
+.image-01 {
+  margin-bottom: 2rem;
   margin-left: 0.1rem;
   border-radius: 0.6rem;
-  margin-bottom: 2rem;
+}
+
+.image-02 {
+  margin-left: 0.1rem;
+  border-radius: 3.1rem;
+}
+
+.image-02:hover {
+  width: 18.75rem;
+  height: 18.75rem;
 }
 
 .content-blocks {
   display: flex;
-  width: 100%;
   justify-content: center;
-  margin: auto;
-  margin-bottom: 0.3rem;
   align-items: center;
   align-content: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0.3rem;
 }
 
 .content {
   display: flex;
-  /*text-align: left;*/
   /*align-items: center;*/
+  width: 50%;
   margin: 0.1rem;
   padding: 0;
-  width: 50%;
 }
 
 .paragraph {
+  margin: 0;
+  padding-right: 0.2rem;
+  color: #272728;
   font-size: 1.1rem;
   text-align: justify;
-  color: #272728;
-  padding-right: 0.2rem;
-  margin: 0;
 }
+
+.paragraph:hover,
+.title-02:hover {
+  background: #FCF2FB;
+}
+
 
 .clickable-element {
-  cursor: pointer;
   justify-content: center;
-  vertical-align: middle;
   margin-left: 0.2rem;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
+.model-01 {
+  width: 97%;
+  height: 1.25rem;
+  padding: 0.15rem 1rem;
+  border: 0.15rem solid #93B3BF;
+  border-radius: 0.5rem;
+  background-color: #F5F5F5;
+  color: #276B85;
+  font-size: 0.75rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
+.model-02 {
+  align-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin: 0 0.3rem;
+  padding: 0.15rem;
+  border: 0.15rem solid #93B3BF;
+  border-radius: 0.31rem;
+  background-color: #F5F5F5;
+  color: #276B85;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+}
 
+/* Questionnaire */
 
+.btn {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.3rem;
+  padding: 0.1rem 0 0.1rem 0.1rem;
+  border: none;
+  border-radius: 3.2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
 
+.right {
+  color: #008000;
+}
+
+.wrong {
+  color: #FF0000;
+}
+
+.feedback {
+  margin: 0 0.10rem 0 0.10rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/**************************/
+
+.container-01 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  margin: 3.13rem 0 0 1.25rem;
+  gap: 2rem;
+}
 
 footer {
-  background: #3C7E99;
-  color: #FFF9E9;
-  text-align: center;
-  padding: 1rem;
   margin-top: 7rem;
-  font-weight: bold;
+  padding: 1rem;
+  background-color: #3C7E99;
+  color: #FFF9E9;
   font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
+
+
+/*Modifiers: The best way to reuse code. If the elements are the same 
+             and you only want to change details - use the modifiers.*/
+
+.bold {
+  font-weight: bold;
+}
+
+.indentation {
+  text-indent: 1rem;
+}
+
+.margin-01 {
+  margin: 0.9rem 0 0 1.3rem;
+}
+
+.margin-left-3 {
+  margin-left: 3rem;
+}
+
+.margin-top-1_3 {
+  margin-top: 1.3rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+
+
+
 
 /*large monitor desktop and up*/
 @media only screen and (min-width: 1030px) {}
@@ -159,9 +269,17 @@ footer {
     width: 90%;
   }
 
-  .image-02 {
+  .image-01 {
     max-width: 100%;
     height: auto;
+  }
+
+  .image-02 {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.25rem;
+    margin-left: 0;
+    border-radius: 3.1rem;
   }
 
   .content {
@@ -169,6 +287,15 @@ footer {
 
   }
 
+  .paragraph {
+    font-size: 95%;
+  }
+
+  .container-01 {
+    grid-template-columns: 0.05fr 0.05fr 0.05fr;
+    padding: 0;
+    gap: 0;
+  }
 
   footer p {
     font-size: 90%;
