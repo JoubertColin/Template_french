@@ -132,7 +132,7 @@ body {
 .model-01 {
   width: 98%;
   height: 1.25rem;
-  padding: 0.15rem 1rem;
+  padding: 0.15rem 0.5rem;
   border: 0.15rem solid #93B3BF;
   border-radius: 0.5rem;
   background-color: #F5F5F5;
