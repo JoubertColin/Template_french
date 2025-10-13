@@ -62,10 +62,10 @@
 
 <!-- Macro: Text - One Paragraph -->
 
-{% macro text(text, audio) %}
+{% macro text(class, text, audio) %}
 
             <div class="content-blocks">
-                <div class="content">
+                <div class="content {{class}}">
                     <p class="paragraph">{{ text }}</p>
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
@@ -77,10 +77,10 @@
 
 <!-- Macro: Text - Two Paragraphs -->
 
-{% macro text_02(text, text_02, audio) %}
+{% macro text_02(class, text, text_02, audio) %}
 
             <div class="content-blocks">
-                <div class="content">
+                <div class="content {{class}}">
                     <p class="paragraph">{{ text }}</p>
                     <p class="paragraph">{{ text_02 }}</p>                    
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
@@ -95,11 +95,11 @@
 
 <!-- Macro: Model_01 - Placeholder Configuration -->
 
-{% macro model_01() %}
+{% macro model_01(class) %}
 
             <div class="content-blocks">
-                <div class="content">
-                    <input class="model-01" type="text" placeholder="Écrivez votre réponse.">
+                <div class="content {{class}}">
+                    <input class="model-01" type="text" placeholder="Écrivez votre réponse sur le support imprimé.">
                 </div>
             </div>
 
@@ -108,10 +108,10 @@
 
 <!-- Macro: Model_02 - Placeholder Configuration: Question Answers -->
 
-{% macro model_02(count, id_number, answer, text, audio) %}
+{% macro model_02(class, count, id_number, answer, text, audio) %}
 
             <div class="content-blocks">
-                <div class="content">
+                <div class="content {{ class }}">
           
                     <p class="paragraph indentation">{{ count }}</p>
 

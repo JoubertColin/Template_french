@@ -11,79 +11,59 @@
 
 
 <!--    ###  Text  ###    -->
-<div class="margin-top-2">
-{{ text("Stromae, nom de scène de Paul Van Haver, est un chanteur, rappeur, auteur-compositeur-interprète et producteur francophone.", "002") }}
-</div>
+{{ text("margin-top-2", "Stromae, nom de scène de Paul Van Haver, est un chanteur, rappeur, auteur-compositeur-interprète et producteur francophone.", "002") }}
 
-{{ text("Paul Van Haver naît en Belgique d'un père rwandais et d'une mère belge, il commence sa carrière en 2000.", "003") }}
+{{ text("", "Paul Van Haver naît en Belgique d'un père rwandais et d'une mère belge, il commence sa carrière en 2000.", "003") }}
 
-{{ text("La musique de Stromae est influencée par la musique électronique, spécialement la new beat (rythme belge), le hip-hop et la world music.", "004") }}
+{{ text("", "La musique de Stromae est influencée par la musique électronique, spécialement la new beat (rythme belge), le hip-hop et la world music.", "004") }}
 
-{{ text("En août 2023, avec le clip du titre \"Papaoutai\", il devient le deuxième artiste à dépasser le milliard de vues sur YouTube avec une chanson en langue française.", "005") }}
+{{ text("", "En août 2023, avec le clip du titre \"Papaoutai\", il devient le deuxième artiste à dépasser le milliard de vues sur YouTube avec une chanson en langue française.", "005") }}
 
-{{ text("Dans ses trois albums, Stromae aborde des sujets graves et contemporains sur des mélodies dansantes.", "006") }}
+{{ text("", "Dans ses trois albums, Stromae aborde des sujets graves et contemporains sur des mélodies dansantes.", "006") }}
 
 
 <!--    ###  First Questionnaire  ###    -->
-<div class="bold margin-top-2">
-{{ text_02("I- ", "Écoutez la chanson et répondez aux questions suivantes:", "007") }}
-</div>
+{{ text_02("bold margin-top-2", "I- ", "Écoutez la chanson et répondez aux questions suivantes:", "007") }}
 
-<div class="margin-01">
-{{ text_02("a) ", "Que pensez-vous de cette chanson?", "008") }}
-</div>
+{{ text_02("margin-01", "a) ", "Que pensez-vous de cette chanson?", "008") }}
 
-<div class="margin-left-3">
-{{ text("Elle me donne envie de...", "009") }}
-</div>
+{{ text("margin-left-2", "Elle me donne envie de...", "009") }}
 
-<div class="margin-left-3">
-{{model_01()}}
-</div>
+{{ model_01("margin-left-2") }}
 
-<div class="margin-left-3">
-{{ text("Je me sens...", "010") }}
-</div>
+{{ text("margin-left-2", "Je me sens...", "010") }}
 
-<div class="margin-left-3">
-{{model_01()}}
-</div>
+{{ model_01("margin-left-2") }}
 
-<div class="margin-01">
-{{ text_02("b) ", "Quels sont les sentiments que la chanson évoque?", "011") }}
-</div>
+{{ text_02("margin-01", "b) ", "Quels sont les sentiments que la chanson évoque?", "011") }}
 
-<div class="margin-left-3">
-{{ text("Elle est...", "012") }}
-</div>
+{{ text("margin-left-2", "Elle est...", "012") }}
 
-<div class="margin-left-3">
-{{model_01()}}
-</div>
+{{ model_01("margin-left-2") }}
 
 
 <!--    ###  Second Questionnaire  ###    -->
-<div class="bold margin-top-2">
-{{ text_02("II- ", "Sous-titrez les images de clip Santé de Stromae, à l'aide des phrases distribuées et les expressions de la première activité:", "013") }}
+{{ text_02("bold margin-top-2", "II- ", "Sous-titrez les images de clip Santé de Stromae, à l'aide des phrases distribuées et les expressions de la première activité:", "013") }}
+
+{{ model_02("margin-top-1_3", "1.", "1", "E", "La serveuse nettoie le restaurant:", "014") }}
+
+{{ model_02("", "2.", "2", "D", "Les hommes dansent dans le bureau:", "015") }}
+
+{{ model_02("", "3.", "3", "A", "La femme coupe le poulet:", "016") }}
+
+{{ model_02("", "4.", "4", "F", "La serveuse danse:", "017") }}
+
+{{ model_02("", "5.", "5", "B", "Les femmes rigolent:", "018") }}
+
+{{ model_02("", "6.", "6", "C", "Les pêcheurs ramassent les poissons:", "019") }}
+
+{{ images_questions_01("A", "foto_a.jpg", "B", "foto_b.jpg", "C", "foto_c.jpg") }}
+
+{{ images_questions_01("D", "foto_d.jpg", "E", "foto_e.jpg", "F", "foto_f.jpg") }}
+
+<div style="margin-top: 20px; text-align: center; color: #97979B; font-size: 0.75rem;">
+    ( Cliquez sur les images pour les agrandir. )
 </div>
-
-<div class="margin-top-1_3">
-{{model_02("1.", "1", "E", "La serveuse nettoie le restaurant:", "014")}}
-</div>
-
-{{model_02("2.", "2", "D", "Les hommes dansent dans le bureau:", "015")}}
-
-{{model_02("3.", "3", "A", "La femme coupe le poulet:", "016")}}
-
-{{model_02("4.", "4", "F", "La serveuse danse:", "017")}}
-
-{{model_02("5.", "5", "B", "Les femmes rigolent:", "018")}}
-
-{{model_02("6.", "6", "C", "Les pêcheurs ramassent les poissons:", "019")}}
-
-{{images_questions_01("A", "foto_a.jpg", "B", "foto_b.jpg", "C", "foto_c.jpg")}}
-
-{{images_questions_01("D", "foto_d.jpg", "E", "foto_e.jpg", "F", "foto_f.jpg")}}
 
 
 <!--    ###  FOOTER, End HTML  ###    -->
