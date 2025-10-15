@@ -95,6 +95,19 @@ body {
   margin-bottom: 0.3rem;
 }
 
+.content-blocks-02 {
+  width: 45.3%;
+  display: flex;
+
+  text-align: center;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0.7em;
+}
+
+
+
 .content {
   display: flex;
   /*align-items: center;*/
@@ -122,6 +135,15 @@ body {
   font-weight: normal;
 }
 
+.paragraph-03 {
+  width: 5%;
+  margin: 0;
+  padding-right: 0.2rem;
+  color: #272728;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
 .clickable-element {
   justify-content: center;
   margin-left: 0.2rem;
@@ -130,7 +152,7 @@ body {
 }
 
 .model-01 {
-  width: 98%;
+  width: 97%;
   height: 1.25rem;
   padding: 0.15rem 0.5rem;
   border: 0.15rem solid #93B3BF;
@@ -197,6 +219,19 @@ body {
   gap: 2rem;
 }
 
+.instruction {
+  text-align: center;
+  color: #97979B;
+  font-size: 0.8rem;
+}
+
+.notes {
+  text-align: left;
+  background-color: #FFFF99;
+  padding: 0.7rem 0.6rem 0.7rem 0.6rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.1rem #0000004d;
+}
+
 footer {
   margin-top: 7rem;
   padding: 1rem;
@@ -235,9 +270,14 @@ footer {
   margin-top: 2rem;
 }
 
-.text-center {
+.gray {
+  color: #97979B;
+}
+
+.align-items {
   align-items: center;
 }
+
 
 
 
@@ -252,6 +292,12 @@ footer {
   .content-blocks {
     width: 90%;
   }
+
+
+  .content-blocks-02 {
+    width: 77%
+  }
+
 
   .content {
     width: 100%;
@@ -277,6 +323,12 @@ footer {
   .content-blocks {
     width: 90%;
   }
+
+  .content-blocks-02 {
+    width: 67%;
+
+  }
+
 
   .image-01 {
     max-width: 100%;
@@ -308,10 +360,21 @@ footer {
     font-size: 95%;
   }
 
+  .paragraph-03 {
+    font-size: 95%;
+    width: 9%;
+  }
+
+
   .container-01 {
     grid-template-columns: 0.05fr 0.05fr 0.05fr;
     padding: 0;
     gap: 0;
+  }
+
+  .notes {
+
+    font-size: 85%;
   }
 
   footer p {

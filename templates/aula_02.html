@@ -1,0 +1,49 @@
+<!--    ###  Import Macros  ###    -->
+{% from "partials/componentes.html" import start, main_image_title, text, text_02, model_01, model_02, images_questions_01, instructions, notes, videos, end %}
+
+
+<!--    ###  Start HTML, HEADER  ###    -->
+{{ start( "Le français pour tous les âges!", "Classe 02" ) }}
+
+
+<!--    ###  Main Title and Image  ###    -->
+{{ main_image_title("", "static/imagens/profissoes.jpg", "Les Professions", "331", show_audio=False) }}
+
+
+<!--    ###  First Questionnaire  ###    -->
+{{ text("margin-top-2 bold", "I-", "Associez la première colonne avec les professions de la deuxième colone:", "020", show_text_02=True) }}
+
+{{ instructions("", "(Écrivez le nombre dans l’espace avant les phrases.)") }}
+
+{{ model_02("margin-top-1_3", "1.", "1", "", "Les femmes balayent la rue.", "021", show_button=False) }}
+
+{{ model_02("", "2.", "2", "", "L'homme répare le lampadaire.", "022", show_button=False) }}
+
+{{ model_02("", "3.", "3", "", "L'homme répare le trottoir.", "023", show_button=False) }}
+
+{{ model_02("", "4.", "4", "", "L'homme tond la pelouse.", "024", show_button=False) }}
+
+{{ model_02("", "5.", "5", "", "La femme guide la communauté sur les questions de santé.", "025", show_button=False) }}
+
+{{ model_02("", "6.", "6", "", "Les hommes nettoient les rues.", "026", show_button=False) }}
+
+{{ model_02("margin-top-1_3", "A.", "1", "6", "Ils <strong><u>sont</u></strong> agents de propreté.", "027") }}
+
+{{ model_02("", "B.", "2", "4", "Il <strong><u>est</u></strong> jardinier.", "028") }}
+
+{{ model_02("", "C.", "3", "5", "Elle <strong><u>est</u></strong> agente de santé communautaire.", "029") }}
+
+{{ model_02("", "D.", "4", "2", "Il <strong><u>est</u></strong> électricien.", "030") }}
+
+{{ model_02("", "E.", "5", "1", "Elles <strong><u>sont</u></strong> agentes de propreté.", "031") }}
+
+{{ model_02("", "F.", "6", "3", "Il <strong><u>est</u></strong> maçon.", "032") }}
+
+{{ notes("margin-top-1_3 align-items", "📝 ","gray bold", "&ensp;Notes en classe:"," Le verbe <strong><u>être</u></strong> au présent: <br><br>  je <strong><u>suis</u></strong> <br> tu <strong><u>es</u></strong> <br> il/ elle/ on <strong><u>est</u></strong> <br> nous <strong><u>sommes</u></strong> <br> vous <strong><u>êtes</u></strong> <br> ils/ elles <strong><u>sont </u></strong>&emsp;&emsp;&emsp;", "059") }}
+
+{{ videos("margin-top-1_3 align-items", "📺 ","gray bold", "&ensp;Vidéo en classe:","https://www.youtube.com/watch?v=z2IrJ0DB0Xg", "etre.jpg") }}
+
+
+<!--    ###  FOOTER, End HTML  ###    -->
+{{ end("Il est toujours temps d'apprendre !!!") }}
+

@@ -25,7 +25,7 @@
 
         <nav id="menu-area">
             <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('teste') }}">Teste</a>
+            <a href="{{ url_for('classes') }}">Classes</a>
             <a href="{{ url_for('supplementaire') }}">Supplémentaire</a>
             <a href="{{ url_for('chansons') }}">Chansons</a>
         </nav>
@@ -39,7 +39,7 @@
 
 <!-- Macro: Image and Main Title -->
 
-{% macro main_image_title(link, image, title, audio) %}
+{% macro main_image_title(link, image, title, audio, show_audio=True) %}
 
         <div class="content-blocks">
             <a href="{{ link }}" target="_self">
@@ -52,7 +52,13 @@
         <div class="content-blocks">  
             <h2 class="title-02">{{ title }}</h2>
             <img class="clickable-element img-audio" width="16px" height="16px" src='static/imagens/som91.png' data-audio='static/sons/frase_{{ audio }}.mp3' alt="Imagem 1">
-            <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
+                    {% if show_audio %}
+                        <img class="clickable-element img-audio" 
+                             width="16px" height="16px" 
+                             src="static/imagens/caracol.png" 
+                             data-audio="static/sons/frase_{{ audio }}_lenta.mp3" 
+                             alt="Imagem 1">
+                    {% endif %}
                 </div>
 
         </div>
@@ -60,45 +66,48 @@
 {% endmacro %}
 
 
-<!-- Macro: Text - One Paragraph -->
+<!-- Macro: Text -->
 
-{% macro text(class, text, audio) %}
+{% macro text(class, text, text_02, audio, show_text_02=True, show_audio=True) %}
 
             <div class="content-blocks">
                 <div class="content {{class}}">
                     <p class="paragraph">{{ text }}</p>
+
+                    {% if show_text_02 %}
+                        <p class="paragraph">{{ text_02 }}</p>
+                    {% endif %}  
+
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
-                    <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
+                    
+                    {% if show_audio %}
+                        <img class="clickable-element img-audio" 
+                             width="16px" height="16px" 
+                             src="static/imagens/caracol.png" 
+                             data-audio="static/sons/frase_{{ audio }}_lenta.mp3" 
+                             alt="Imagem 1">
+                    {% endif %}
+                    
+
                 </div>
             </div>
 
 {% endmacro %}
 
 
-<!-- Macro: Text - Two Paragraphs -->
-
-{% macro text_02(class, text, text_02, audio) %}
-
-            <div class="content-blocks">
-                <div class="content {{class}}">
-                    <p class="paragraph">{{ text }}</p>
-                    <p class="paragraph">{{ text_02 }}</p>                    
-                    <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
-                    <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
-                </div>
-
-                </div>
-            </div>
-
-{% endmacro %}
 
 
 <!-- Macro: Model_01 - Placeholder Configuration -->
 
-{% macro model_01(class) %}
+{% macro model_01(class, text, show_text=False) %}
 
             <div class="content-blocks">
                 <div class="content {{class}}">
+                
+                    {% if show_text %}
+                        <p class="paragraph">{{ text | safe }}</p>
+                    {% endif %}  
+                
                     <input class="model-01" type="text" placeholder="Écrivez votre réponse sur le support imprimé.">
                 </div>
             </div>
@@ -108,18 +117,18 @@
 
 <!-- Macro: Model_02 - Placeholder Configuration: Question Answers -->
 
-{% macro model_02(class, count, id_number, answer, text, audio) %}
+{% macro model_02(class, count, id_number, answer, text, audio, show_button=True) %}
 
             <div class="content-blocks">
                 <div class="content {{ class }}">
           
-                    <p class="paragraph indentation">{{ count }}</p>
-
+                    <p class="paragraph-03 indentation">{{ count }}</p>
+                        {% if show_button %}
                         <input id="resp{{ id_number }}" class="model-02" type="text" placeholder="" data-correct="{{ answer }}">
                         <button class="btn" onclick="checkAnswer('resp{{ id_number }}')"><img width="18px" height="18px" src="static/imagens/enter.png" alt="Descrição da imagem"></button>
                         <span class="feedback" id="fb{{ id_number }}"></span>
-
-                    <p class="paragraph">{{ text }}</p>
+                        {% endif %} 
+                    <p class="paragraph">{{ text | safe }}</p>
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
                     <img class="clickable-element img-audio" width="16px" height="16px" src="static/imagens/caracol.png" data-audio="static/sons/frase_{{ audio }}_lenta.mp3" alt="Imagem 1">
                 </div>
@@ -152,8 +161,53 @@
 {% endmacro %}
 
 
-<!-- Macro: Footer -->
+<!-- Macro: Instructions - User Instructions. -->
 
+{% macro instructions(class, text) %}
+
+            <div class="instruction {{ class }}">{{ text }}</div>
+
+{% endmacro %}
+
+
+<!-- Macro: Notes - User Instructions. -->
+
+{% macro notes(class, count, class_02, text, text_02, audio) %}
+
+            <div class="content-blocks">
+                <div class="content {{ class }}">
+                    <p class="indentation">{{ count }}</p>
+                    <p class="paragraph {{ class_02 }}">{{ text | safe }}</p>
+                </div>
+            </div>
+            <div class="content-blocks-02">
+                <div class="notes">
+                    <p>{{ text_02 | safe }}
+                    <img class="clickable-element img-audio" width="20px" height="20px" src="static/imagens/som91.png" data-audio="static/sons/frase_{{ audio }}.mp3" alt="Imagem 1">
+                    </p>
+                </div>
+            </div>
+
+{% endmacro %}
+
+{% macro videos(class, count, class_02, text, video, image) %}
+
+            <div class="content-blocks">
+                <div class="content {{ class }}">
+                    <p class="indentation">{{ count }}</p>
+                    <p class="paragraph {{ class_02 }}">{{ text | safe }}</p>
+                </div>
+            </div>
+            <div class="content-blocks-02">
+                <a href="{{ video }}">
+                <img class="imagem-02" width="180px" height="auto" src="static/imagens/{{ image }}">
+                </a>
+            </div>
+
+{% endmacro %}
+
+
+<!-- Macro: Footer -->
 {% macro end(footer) %}
         <script src="static/script.js"></script>
 

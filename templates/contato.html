@@ -1,9 +1,73 @@
-{% extends "base.html" %}
 
-{% block title %}Contato - Meu Site{% endblock %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Dinâmico com Jinja2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            line-height: 1.5;
+        }
+        .correto {
+            color: green;
+            font-weight: bold;
+        }
+        .errado {
+            color: red;
+            text-decoration: line-through;
+        }
+        .questao {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            border-radius: 5px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-{% block cabecalho %}Novos Contatos ....{% endblock %}
+<h1>Questionário</h1>
+<form method="POST">
+    {% for q in quiz_data %}
+        <div class="questao">
+            <p><strong>{{ loop.index }}. {{ q.pergunta }}</strong></p>
 
-,
+            {% for letra, texto in q.alternativas.items() %}
+                <label>
+                    <input type="radio" name="{{ q.id }}" value="{{ letra }}">
+                    {{ texto }}
+                </label><br>
+            {% endfor %}
 
+            {% if resultado.get(q.id) %}
+                <p class="{{ resultado[q.id] }}">
+                    {% if resultado[q.id] == 'correto' %}
+                        ✅ Correto!
+                    {% else %}
+                        ❌ Errado. Resposta certa: <b>{{ q.alternativas[q.correta] }}</b>
+                    {% endif %}
+                </p>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
 

@@ -1,5 +1,5 @@
 <!--    ###  Import Macros  ###    -->
-{% from "partials/componentes.html" import start, main_image_title, text, text_02, model_01, model_02, images_questions_01, end %}
+{% from "partials/componentes.html" import start, main_image_title, text, text_02, model_01, model_02, images_questions_01, instructions, end %}
 
 
 <!--    ###  Start HTML, HEADER  ###    -->
@@ -11,39 +11,41 @@
 
 
 <!--    ###  Text  ###    -->
-{{ text("margin-top-2", "Stromae, nom de scène de Paul Van Haver, est un chanteur, rappeur, auteur-compositeur-interprète et producteur francophone.", "002") }}
+{{ text("margin-top-2", "Stromae, nom de scène de Paul Van Haver, est un chanteur, rappeur, auteur-compositeur-interprète et producteur francophone.", "002", show_text_02=False) }}
 
-{{ text("", "Paul Van Haver naît en Belgique d'un père rwandais et d'une mère belge, il commence sa carrière en 2000.", "003") }}
+{{ text("", "Paul Van Haver naît en Belgique d'un père rwandais et d'une mère belge, il commence sa carrière en 2000.", "003", show_text_02=False) }}
 
-{{ text("", "La musique de Stromae est influencée par la musique électronique, spécialement la new beat (rythme belge), le hip-hop et la world music.", "004") }}
+{{ text("", "La musique de Stromae est influencée par la musique électronique, spécialement la new beat (rythme belge), le hip-hop et la world music.", "004", show_text_02=False) }}
 
-{{ text("", "En août 2023, avec le clip du titre \"Papaoutai\", il devient le deuxième artiste à dépasser le milliard de vues sur YouTube avec une chanson en langue française.", "005") }}
+{{ text("", "En août 2023, avec le clip du titre \"Papaoutai\", il devient le deuxième artiste à dépasser le milliard de vues sur YouTube avec une chanson en langue française.", "005", show_text_02=False) }}
 
-{{ text("", "Dans ses trois albums, Stromae aborde des sujets graves et contemporains sur des mélodies dansantes.", "006") }}
+{{ text("", "Dans ses trois albums, Stromae aborde des sujets graves et contemporains sur des mélodies dansantes.", "006", show_text_02=False) }}
 
 
 <!--    ###  First Questionnaire  ###    -->
-{{ text_02("bold margin-top-2", "I- ", "Écoutez la chanson et répondez aux questions suivantes:", "007") }}
+{{ text("bold margin-top-2", "I- ", "Écoutez la chanson et répondez aux questions suivantes:", "007") }}
 
-{{ text_02("margin-01", "a) ", "Que pensez-vous de cette chanson?", "008") }}
+{{ text("margin-01", "a) ", "Que pensez-vous de cette chanson?", "008") }}
 
-{{ text("margin-left-2", "Elle me donne envie de...", "009") }}
-
-{{ model_01("margin-left-2") }}
-
-{{ text("margin-left-2", "Je me sens...", "010") }}
+{{ text("margin-left-2", "Elle me donne envie de...", "009", show_text_02=False) }}
 
 {{ model_01("margin-left-2") }}
 
-{{ text_02("margin-01", "b) ", "Quels sont les sentiments que la chanson évoque?", "011") }}
+{{ text("margin-left-2", "Je me sens...", "010", show_text_02=False) }}
 
-{{ text("margin-left-2", "Elle est...", "012") }}
+{{ model_01("margin-left-2") }}
+
+{{ text("margin-01", "b) ", "Quels sont les sentiments que la chanson évoque?", "011") }}
+
+{{ text("margin-left-2", "Elle est...", "012", show_text_02=False) }}
 
 {{ model_01("margin-left-2") }}
 
 
 <!--    ###  Second Questionnaire  ###    -->
-{{ text_02("bold margin-top-2", "II- ", "Sous-titrez les images de clip Santé de Stromae, à l'aide des phrases distribuées et les expressions de la première activité:", "013") }}
+{{ text("bold margin-top-2", "II- ", "Sous-titrez les images de clip Santé de Stromae, à l'aide des phrases distribuées et les expressions de la première activité:", "013") }}
+
+{{ instructions("", "(Écrivez la lettre de l’image dans l’espace avant les phrases.)") }}
 
 {{ model_02("margin-top-1_3", "1.", "1", "E", "La serveuse nettoie le restaurant:", "014") }}
 
@@ -61,10 +63,21 @@
 
 {{ images_questions_01("D", "foto_d.jpg", "E", "foto_e.jpg", "F", "foto_f.jpg") }}
 
-<div style="margin-top: 20px; text-align: center; color: #97979B; font-size: 0.75rem;">
-    ( Cliquez sur les images pour les agrandir. )
-</div>
+{{ instructions("margin-top-1_3", "( Cliquez sur les images pour les agrandir. )") }}
+
+{{ model_01("indentation margin-top-1_3", "A. ", show_text=True) }}
+
+{{ model_01("indentation", "B. ", show_text=True) }}
+
+{{ model_01("indentation", "C. ", show_text=True) }}
+
+{{ model_01("indentation", "D. ", show_text=True) }}
+
+{{ model_01("indentation", "E. ", show_text=True) }}
+
+{{ model_01("indentation", "F. ", show_text=True) }}
 
 
 <!--    ###  FOOTER, End HTML  ###    -->
 {{ end("Il est toujours temps d'apprendre !!!") }}
+
